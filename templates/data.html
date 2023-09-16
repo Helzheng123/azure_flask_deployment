@@ -1,0 +1,46 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+    <section>
+        <h2 class="text-xl mb-2">These are the <strong>top 15 cities</strong> with healthy lifestyles:</h2>
+        <table class="table-auto">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">City</th>
+                    <th class="px-4 py-2">Rank</th>
+                    <th class="px-4 py-2">Sunshine hours (City)</th>
+                    <th class="px-4 py-2">Cost of a bottle of water (City)</th>
+                    <th class="px-4 py-2">Obesity levels (Country)</th>
+                    <th class="px-4 py-2">Life expectancy (Years) (Country)</th>
+                    <th class="px-4 py-2">Pollution (Index score) (City)</th>
+                    <th class="px-4 py-2">Annual avg. hours worked</th>
+                    <th class="px-4 py-2">Happiness levels (Country)</th>
+                    <th class="px-4 py-2">Outdoor activities (City)</th>
+                    <th class="px-4 py-2">Number of take out places (City)</th>
+                    <th class="px-4 py-2">Cost of a monthly gym membership (City)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in data.values %}
+                <tr>
+                    <td class="border px-4 py-2">{{ data[0] }}</td>
+                    <td class="border px-4 py-2">{{ data[1] }}</td>
+                    <td class="border px-4 py-2">{{ data[2] }}</td>
+                    <td class="border px-4 py-2">{{ data[3] }}</td>
+                    <td class="border px-4 py-2">{{ data[4] }}</td>
+                    <td class="border px-4 py-2">{{ data[5] }}</td>
+                    <td class="border px-4 py-2">{{ data[6] }}</td>
+                    <td class="border px-4 py-2">{{ data[7] }}</td>
+                    <td class="border px-4 py-2">{{ data[8] }}</td>
+                    <td class="border px-4 py-2">{{ data[9] }}</td>
+                    <td class="border px-4 py-2">{{ data[10] }}</td>
+                    <td class="border px-4 py-2">{{ data[11] }}</td>
+                    <td class="border px-4 py-2">{{ data[12] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+
+{% endblock %}

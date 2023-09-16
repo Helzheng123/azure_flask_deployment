@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Healthcare App</title>
+    <title>Welcome to Healthy Lifestyle!</title>
     
     <!-- Tailwind CSS via CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -13,20 +13,21 @@
 <body class="bg-gray-200">
 
     <header class="bg-blue-600 text-white p-4">
-        <h1 class="text-2xl">Welcome to My Healthcare App</h1>
+        <h1 class="text-2xl">Welcome to Healthy Lifestyle!</h1>
         <nav>
             <ul class="flex space-x-4">
                 <li><a href="/" class="hover:underline">Home</a></li>
                 <li><a href="/about" class="hover:underline">About</a></li>
                 <li><a href="/data" class="hover:underline">Data</a></li>
-                <li><a href="/random" class="hover:underline">Random Stuff</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="p-4">
-
-        {% block content %}{% endblock %}
+        {% block content %}
+        <h1>This is an application that views the 2021 report on the top 44 cities with healthy lifestyles.</h1>
+        <p>To view the data, press on the data tab.</p>
+        {% endblock %}
 
     </main>
 
