@@ -11,7 +11,7 @@ def index():
 def aboutpage():
     return render_template('about.html')
 
-df = pd.read_csv('healthy_lifestyle_city_2021.csv')
+df = pd.read_csv('data/healthy_lifestyle_city_2021.csv')
 @app.route('/data')
 def data(data=df):
     data = data.head(15)
